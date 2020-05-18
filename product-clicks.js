@@ -1,6 +1,6 @@
-dataLayer = [{'pageType' : 'listingPage'}];
+dataLayer = [{'pageType' : 'listingPage'}];  // Goes into the <head></head> above GA snippet
 
-function productO(){
+function productO(){  //create array of products and position
   
   var productFieldObjects = [];
   var i;
@@ -107,7 +107,7 @@ function productO(){
  return productFieldObjects;
 }
 
-function getAnchor(){
+function getAnchor(){  // Find out what product out of the array was clicked
   var productList = document.getElementsByClassName("products-list");
   var item = productList[0].getElementsByClassName("item");
   var i;
@@ -129,7 +129,7 @@ function productClick(productObj) {
  var i = getAnchor();
     var clickEvent = {
         'actionField' : {'list' : 'Search Results'},
-        'products' : productObj[i]
+        'products' : productObj[i]      //pull productObj
     }; 
     
     var ecommObj = {
@@ -141,7 +141,7 @@ function productClick(productObj) {
 function product(){
 var i = getAnchor();
  dataLayer.push({
-    'event' : 'productClick',
+    'event' : 'productClick',  // event to trigger tag
     'ecommerce' :  productClick(productObj),
     'eventCallBack' : function() {
       document.location = productObj[i].url
