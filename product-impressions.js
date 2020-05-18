@@ -1,6 +1,6 @@
-dataLayer = [{'pageType' : 'listingPage'}];
+dataLayer = [{'pageType' : 'listingPage'}]; // Goes into the <head></head> above GA snippet
 
-function getImpressionVar(){
+function getImpressionVar(){ // Collects product data for impressionFieldsObjects
 
   var product_list = document.getElementsByClassName("products-list");
   var item = product_list[0].getElementsByClassName("item");
