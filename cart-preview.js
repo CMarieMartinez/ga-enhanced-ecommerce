@@ -1,4 +1,4 @@
-dataLayer = [{'pageType' : 'cartPage'}];
+dataLayer = [{'pageType' : 'cartPage'}];  // Goes into the <head></head> above GA snippet
 
 function cartProducts(){  
     var cartList = document.getElementById("shopping-cart-table");
@@ -33,8 +33,8 @@ function cartProducts(){
         var findquantity = product_actions.getElementsByClassName("input-text qty")[0].value;
         var quantity = parseFloat(findquantity);
 
-        var product = {
-            'name' : name,
+        var product = {  //Push product data to dataLayer to create remarketing lists for Google Ads
+            'name' : name,  // remarketing campaigns to prevent cart abandonment
             'id' : id,
             'price' : price,
             'category' : category,
