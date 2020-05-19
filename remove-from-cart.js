@@ -1,6 +1,6 @@
-dataLayer = [{'pageType' : 'productPage'}];
+dataLayer = [{'pageType' : 'cartPage'}];  // Goes into the <head></head> above GA snippet
 
-function findPos() {
+function findPos() {  // Locate product position in array of products in cart
     var i;
 
     var cartList = document.getElementById("shopping-cart-table");
@@ -21,7 +21,7 @@ function findPos() {
 
 var pos = findPos();
 
-function cartObjs(pos) {
+function cartObjs(pos) {  // Create productFieldObjects
     var posi = parseInt(pos);
 
     var cartList = document.getElementById("shopping-cart-table");
@@ -80,7 +80,7 @@ function dlPush() {
     };
 
     dataLayer.push({
-        'event': 'removeFromCart',
+        'event': 'removeFromCart',  // Triggers remove from cart tag
         'ecommerce': rem
     });
 }
