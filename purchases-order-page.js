@@ -1,6 +1,6 @@
-dataLayer = [{'pageType' : 'orderPage'}];
+dataLayer = [{'pageType' : 'orderPage'}];  // Goes into the <head></head> above GA snippet
 
-function cartProducts(){  
+function cartProducts(){  // Create productFieldObjects
     var review_table = document.getElementById("checkout-review-table");
     var tbody = review_table.getElementsByTagName("tbody");
     var tr = tbody[1].getElementsByTagName("tr");
@@ -45,7 +45,7 @@ function cartProducts(){
     return products;
 }
 
-function getRevenuebd(){
+function getRevenuebd(){  //  Create actionField
     var shipping;
 
     var getTotal = document.getElementById("checkout-review-table");
@@ -100,7 +100,7 @@ function getRevenuebd(){
          shipping = parseFloat(after_shipping_split);
      }
 
-     var actionField = {
+     var actionField = {  // Missing transaction id
          'revenue' : revenue,
          'tax' : tax,
          'shipping' : shipping,
@@ -121,7 +121,7 @@ function getPurchase(){
          'purchase' : purchase
     };
 
-    localStorage.setItem("ecomm", JSON.stringify(ecommerce));
+    localStorage.setItem("ecomm", JSON.stringify(ecommerce));  // Save incomplete ecommerce object to local storage
 }
 
 function attachPush(){
