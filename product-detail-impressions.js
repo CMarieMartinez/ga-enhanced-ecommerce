@@ -1,6 +1,6 @@
-dataLayer = [{'pageType' : 'productPage'}];
+dataLayer = [{'pageType' : 'productPage'}]; // Goes into the <head></head> above GA snippet
 
-function getitemObject(){
+function getitemObject(){  // Create productFieldObjects
 
   var productFieldObjects = [];
   var product_shop = document.getElementsByClassName("product-shop-details");
@@ -39,8 +39,8 @@ function getitemObject(){
   
   var productFieldObject = {
     'name' : name,
-    'id' : sku,
-    'price' : price,
+    'id' : sku,  // Optionally, id can be pushed into the dataLayer as a variable to be used for building
+    'price' : price,  // Google Ads lists for dynamic remarketing campaigns
     'brand' : brand,
     'category' : category
   };  
