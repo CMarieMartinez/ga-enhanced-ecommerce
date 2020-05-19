@@ -1,6 +1,6 @@
-dataLayer = [{'pageType' : 'productPage'}];
+dataLayer = [{'pageType' : 'productPage'}];  // Goes into the <head></head> above GA snippet
 
-function actionaddObject(){
+function actionaddObject(){  // Create productFieldObjects
   var productFieldObjects = [];
   var product_shop = document.getElementsByClassName("product-shop-details");
   var desc = product_shop[0].getElementsByTagName("p")[0].innerHTML;
